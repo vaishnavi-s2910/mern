@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Table</title>
+</head>
+<body>
+<center>
+    <h1>Image Table</h1>
+    <p>This is a simple image table.</p>
+<table border="1" cellpadding="10">
+    <tr>
+        <td>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="150" height="100">
+        </td>
+        <td>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="150" height="100">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="150" height="100">
+        </td>
+        <td>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="150" height="100">
+        </td>
+    </tr>
+</table>
+
+<script>
+    var age=20;
+    var age=30;
+
+    console.log(age);
+
+    let name="John";
+    console.log(name);
+    const pi=3.14;
+    console.log(pi);
+    let username="John";
+    let password="password123";
+    if(username==="John" && password==="password123"){
+        console.log("Login successful");
+    }else{
+        console.log("Login failed");
+    }
+    function student(name,com,clg="SECE"){
+            console.log("Hello",name,"studied in college",clg,"working in",com);
+        }
+        student("Ram","TCS")
+        student("SHAM","Infosys")
+        student("Priya","Google")
+        student("Sagar","Microsoft")
+
+        let data=function(){
+            return "Hello JavaScript";
+        }
+
+        console.log(data());
+
+        let mul=()=>{
+            return "Hello Arrow Function";
+        }
+        console.log(mul());
+function sece(callback)
+{
+    console.log("Hello SECE");
+    callback();
+}
+function stud(){
+console.log("Display student information");
+}
+sece(stud)
+
+function WhatsApp(){
+    console.log("Hello WhatsApp");
+}
+let fetch_api=new Promise((resolve,reject)=>{
+    let api=true;
+    if(api){
+        resolve("Fetched Api data");
+    }else{
+        reject("Failed to fetch Api data");
+    }
+})
+fetch_api.then(data=>
+    console.log(data))
+
+let food=new Promise((resolve,reject)=>{
+    let food=true;
+    if(food){
+        resolve("Food is delivered");
+    }else{
+        setTimeout(()=>{
+            reject("Food is not delivered ");
+        },3000)
+        
+    }
+})
+food.then(data=>
+    console.log(data))
+
+</script>
+</center>
+
+</body>
+</html>
