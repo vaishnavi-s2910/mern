@@ -28,7 +28,9 @@
     </tr>
 </table>
 
-<script>
+<center>
+    <script>
+        /*
     var age=20;
     var age=30;
 
@@ -99,10 +101,78 @@ let food=new Promise((resolve,reject)=>{
     }
 })
 food.then(data=>
-    console.log(data))
+    console.log(data))*/
 
+/*let emp=[
+        {
+        emp_id:100,
+        emp_name:"Tharu",
+        salary:40000,
+        skill:["python","Java","C"]
+    },
+     {emp_id:101,
+        emp_name:"Ram",
+        salary:48800,
+        company:{
+            c1:"Tcs",
+            c2:"Accenture"
+        }
+     }
+
+
+]
+console.log(emp[0].skill[1])
+console.log(emp[1].company.c2)
+
+let stringfy=JSON.stringify(emp);
+console.log(stringfy);
+let parsed=JSON.parse(stringfy);
+console.log(parsed);
+
+let copied={...emp};
+copied.salary=50000;
+console.log("Original Data:", emp);
+console.log("Copied Data:", copied);*/
+
+
+let emp=[
+        {
+        emp_id:100,
+        emp_name:"Tharu",
+        salary:40000,
+        skill:["python","Java","C"]
+    },
+     {emp_id:101,
+        emp_name:"Ram",
+        salary:48800,
+        company:{
+            c1:"Tcs",
+            c2:"Accenture"
+        }
+     }
+
+
+]
+console.log(emp[0].skill[1])
+console.log(emp[1].company.c2)
+console.log(emp)
+let string_data=JSON.stringify(emp);
+console.log(string_data)
+let parased_data=JSON.parse(string_data)
+console.log(parased_data)
+let copy_data=[...emp ];
+copy_data[1].salary=80000;
+copy_data[1].company.c1="SERVICE NOW"
+console.log("Original data",emp)
+console.log("Copied Data",copy_data)
+// DEEP COPY
+let copied=JSON.parse(JSON.stringify(emp));
+copied[1].company.c1="SER"
+copied[0].salary=80000
+console.log(copied)
+console.log(emp)
 </script>
 </center>
-
+</center>
 </body>
 </html>
