@@ -1,69 +1,21 @@
-import Home from "./assets/Home"
-
-function Player(prop) {
-  return (
-    <>
-      <div style={{ border: "1px solid black", padding: "15px", margin: "10px", width: "250px", display: "inline-block", borderRadius: "10px" }}>
-        
-        <h2>Country: {prop.obj}</h2>
-        <h2>Name: {prop.name}</h2>
-        <h2>Team: {prop.Team}</h2>
-      </div>
-    </>
-  )
-}
-
-function Data(prop) {
-  return (
-    <h2>{prop.obj}</h2>
-  )
-}
-
-function Players(prop) {
-  return (
-    <>
-      {prop.obj1.map((p) => (
-        <Player
-          obj="India"
-          name={p.name}
-          Team={p.Team}
-        />
-      ))}
-    </>
-  )
-}
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
 
 function App() {
+    return (
+        <BrowserRouter>
+            <nav>
+                <Link to="/">Home</Link> | 
+                <Link to="/about">About</Link>
+            </nav>
 
-  let players_data = [
-    {
-      name: "Kohli",
-      Team: "India"
-    },
-    {
-      name: "Dhoni",
-      Team: "India"
-    },
-    {
-      name: "Sachin",
-      Team: "India"
-    }
-  ]
-
-  return (
-    <>
-      <center>
-        <h1>This is App Component</h1>
-        <h2>JS Files</h2>
-
-        <Home />
-
-        <Data obj="Players" />
-
-        <Players obj1={players_data} />
-      </center>
-    </>
-  )
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;
